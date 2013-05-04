@@ -6,14 +6,26 @@ var registry = {
   'underscore.js': 'http://some.url.com/underscore.js',
   // Alias
   'underscore': 'underscore.js',
+  'angular': 'angular.js',
   // Set
   'backbone': ['http://some.url.com/backbone.js', 'underscore', 'jquery'],
   // Depend on a set
   'app': ['backbone', 'http://some.thing.com/app.js'],
   // Duplication
-  'duped': ['backbone', 'underscore']
+  'duped': ['backbone', 'underscore'],
+  // Async
+  'async': ['angular', 'app']
+};
+
+var opts = {
+  registry: registry,
+  helper: function (identifier, cb) {
+    return cb(null, ['http://angular']);
+  }
 };
 
 Object.keys(registry).forEach(function (key) {
-  console.log(key + ':', resolve(key, registry));
+  resolve(key, opts, function (err, set) {
+    console.log(key + ':', set);
+  });
 });
