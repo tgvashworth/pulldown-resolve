@@ -1,4 +1,4 @@
-var resolve = require('./');
+var resolve = require('../');
 
 var registry = {
   // Canonical

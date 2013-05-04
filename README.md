@@ -1,5 +1,7 @@
 # pulldown-resolve
 
+[![build status](https://secure.travis-ci.org/phuu/pulldown-resolve.png)](http://travis-ci.org/phuu/pulldown-resolve)
+
 Resolve URLs, aliases and sets for pulldown.
 
 ```javascript
