@@ -1,7 +1,7 @@
 {
   "name": "pulldown-resolve",
   "version": "0.0.1",
-  "description": "ERROR: No README.md file found!",
+  "description": "Resolve URLs, aliases and sets for pulldown.",
   "main": "index.js",
   "directories": {
     "test": "test"
@@ -17,6 +17,6 @@
     "test": "tap ./test"
   },
   "repository": "",
-  "author": "",
+  "author": "Tom Ashworth <tom@phuu.net>",
   "license": "MIT"
 }
