@@ -4,7 +4,7 @@ var resolve = require('../'),
 
 var registry = {
   // Canonical
-  'jquery': 'http://some.url.com/jquery.js',
+  'jquery': '//some.url.com/jquery.js',
   'underscore.js': 'http://some.url.com/underscore.js',
   'angular-resource': 'http://some.url.com/angular-resource.js',
   // Alias
@@ -21,26 +21,26 @@ var registry = {
 };
 
 var results = {
-  jquery: [ 'http://some.url.com/jquery.js' ],
+  jquery: [ '//some.url.com/jquery.js' ],
   'underscore.js': [ 'http://some.url.com/underscore.js' ],
   'angular-resource': [ 'http://some.url.com/angular-resource.js' ],
   underscore: [ 'http://some.url.com/underscore.js' ],
   angular: [ 'http://angular', 'http://some.url.com/angular-resource.js' ],
   backbone: [ 'http://some.url.com/backbone.js',
     'http://some.url.com/underscore.js',
-    'http://some.url.com/jquery.js' ],
+    '//some.url.com/jquery.js' ],
   app: [ 'http://some.url.com/backbone.js',
     'http://some.url.com/underscore.js',
-    'http://some.url.com/jquery.js',
+    '//some.url.com/jquery.js',
     'http://some.thing.com/app.js' ],
   duped: [ 'http://some.url.com/backbone.js',
     'http://some.url.com/underscore.js',
-    'http://some.url.com/jquery.js' ],
+    '//some.url.com/jquery.js' ],
   async: [ 'http://angular',
     'http://some.url.com/angular-resource.js',
     'http://some.url.com/backbone.js',
     'http://some.url.com/underscore.js',
-    'http://some.url.com/jquery.js',
+    '//some.url.com/jquery.js',
     'http://some.thing.com/app.js' ]
 };
 
@@ -54,7 +54,7 @@ var opts = {
 Object.keys(registry).forEach(function (key) {
   t.test(key, function (t) {
     resolve(key, opts, function (err, set) {
-      t.ok(deepEqual(results[key], set));
+      t.ok(deepEqual(results[key], set), key + ' matches');
       t.end();
     });
   });
