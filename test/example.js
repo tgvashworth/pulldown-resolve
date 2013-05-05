@@ -4,6 +4,7 @@ var registry = {
   // Canonical
   'jquery': 'http://some.url.com/jquery.js',
   'underscore.js': 'http://some.url.com/underscore.js',
+  'angular-resource': 'http://some.url.com/angular-resource.js',
   // Alias
   'underscore': 'underscore.js',
   'angular': 'angular.js',
@@ -20,7 +21,7 @@ var registry = {
 var opts = {
   registry: registry,
   helper: function (identifier, cb) {
-    return cb(null, ['http://angular']);
+    return cb(null, ['http://angular', 'angular-resource']);
   }
 };
 
