@@ -53,7 +53,7 @@ var opts = {
 
 Object.keys(registry).forEach(function (key) {
   t.test(key, function (t) {
-    resolve(key, opts, function (err, set) {
+    resolve.identifier(key, opts, function (err, set) {
       t.ok(deepEqual(results[key], set), key + ' matches');
       t.end();
     });
