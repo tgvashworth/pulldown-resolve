@@ -1,6 +1,6 @@
 {
   "name": "pulldown-resolve",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Resolve URLs, aliases and sets for pulldown.",
   "main": "index.js",
   "directories": {
