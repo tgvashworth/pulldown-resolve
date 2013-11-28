@@ -59,3 +59,8 @@ Object.keys(registry).forEach(function (key) {
     });
   });
 });
+
+// resolve.on('resolving', console.log.bind(console, 'resolving'));
+// resolve.on('resolved', console.log.bind(console, 'resolved'));
+// resolve.on('helper:resolving', console.log.bind(console, 'helper:resolving'));
+// resolve.on('helper:resolved', console.log.bind(console, 'helper:resolved'));
